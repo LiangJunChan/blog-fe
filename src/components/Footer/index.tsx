@@ -22,7 +22,7 @@ export default () => {
         {
           key: 'github',
           title: <GithubOutlined />,
-          href: 'https://github.com/LiangJunChan',
+          href: 'https://github.com/LiangJunChan/blog-fe',
           blankTarget: true,
         },
         // {

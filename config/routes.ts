@@ -48,10 +48,39 @@
     path: '/article',
     component: './article'
   },
-
+  {
+    name: '技术文章',
+    icon: 'table',
+    path: '/learn/search',
+    component: './search',
+    routes: [
+      {
+        path: '/learn/search',
+        redirect: '/search/articles',
+      },
+      {
+        name: '文章',
+        icon: 'smile',
+        path: '/learn/search/articles',
+        component: './search/articles',
+      },
+      {
+        name: '项目',
+        icon: 'smile',
+        path: '/learn/search/projects',
+        component: './search/projects',
+      },
+      {
+        name: '应用',
+        icon: 'smile',
+        path: '/learn/search/applications',
+        component: './search/applications',
+      },
+    ],
+  },
   {
     path: '/',
-    redirect: '/welcome',
+    redirect: '/learn/search/articles',
   },
   {
     component: './404',
