@@ -8,10 +8,15 @@
 export default {
   dev: {
     '/api/': {
-      target: 'https://preview.pro.ant.design',
+      target: 'http://127.0.0.1:9900',
       changeOrigin: true,
-      pathRewrite: { '^': '' },
+      pathRewrite: { '^/api': '' },
     },
+    '/static/': {
+      target: 'http://localhost:9900/html',
+      changeOrigin: true,
+      pathRewrite: { '^/static': ''}
+    }
   },
   test: {
     '/api/': {

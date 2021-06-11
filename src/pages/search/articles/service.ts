@@ -6,3 +6,9 @@ export async function queryFakeList(params: ListItemDataType) {
     params,
   });
 }
+
+export async function queryArticlesList(params: ListItemDataType) {
+  return request('/api/articles', {
+    params,
+  });
+}
