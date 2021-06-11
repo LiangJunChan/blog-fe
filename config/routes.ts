@@ -17,13 +17,13 @@
   },
   {
     path: '/welcome',
-    name: 'welcome',
+    // name: 'welcome',
     icon: 'smile',
     component: './Welcome',
   },
   {
     path: '/admin',
-    name: 'admin',
+    // name: 'admin',
     icon: 'crown',
     access: 'canAdmin',
     component: './Admin',
@@ -37,13 +37,13 @@
     ],
   },
   {
-    name: 'list.table-list',
+    // name: 'list.table-list',
     icon: 'table',
     path: '/list',
     component: './TableList',
   },
   {
-    name: '文章',
+    // name: '文章',
     icon: 'table',
     path: '/article',
     component: './article'
