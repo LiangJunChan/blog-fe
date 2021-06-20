@@ -49,13 +49,13 @@ const GlobalHeaderRight: React.FC = () => {
       <span
         className={styles.action}
         onClick={() => {
-          window.open('https://pro.ant.design/docs/getting-started');
+          window.open('https://beta-pro.ant.design/docs/introduction-cn');
         }}
       >
         <QuestionCircleOutlined />
       </span>
-      <Avatar />
-      <SelectLang className={styles.action} />
+      {/* <Avatar />
+      <SelectLang className={styles.action} /> */}
     </Space>
   );
 };

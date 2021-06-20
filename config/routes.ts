@@ -1,86 +1,39 @@
 ﻿export default [
   {
-    path: '/user',
-    layout: false,
+    path: '/home',
+    name: '首页'
+  },
+  {
+    path: '/f2e',
+    name: '前端·博文',
     routes: [
       {
-        path: '/user',
+        path: '/f2e/engineering',
+        name: '前端工程化',
         routes: [
-          {
-            name: 'login',
-            path: '/user/login',
-            component: './user/Login',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    path: '/welcome',
-    // name: 'welcome',
-    icon: 'smile',
-    component: './Welcome',
-  },
-  {
-    path: '/admin',
-    // name: 'admin',
-    icon: 'crown',
-    access: 'canAdmin',
-    component: './Admin',
-    routes: [
-      {
-        path: '/admin/sub-page',
-        name: 'sub-page',
-        icon: 'smile',
-        component: './Welcome',
-      },
-    ],
-  },
-  {
-    // name: 'list.table-list',
-    icon: 'table',
-    path: '/list',
-    component: './TableList',
-  },
-  {
-    // name: '文章',
-    icon: 'table',
-    path: '/article',
-    component: './article'
-  },
-  {
-    name: '技术文章',
-    icon: 'table',
-    path: '/learn/search',
-    component: './search',
-    routes: [
-      {
-        path: '/learn/search',
-        redirect: '/search/articles',
+          { path: '/f2e/engineering/build',name: '自动化部署', component: './autobuild' }
+        ]
       },
       {
+        path: '/f2e/learn',
         name: '文章',
-        icon: 'smile',
-        path: '/learn/search/articles',
-        component: './search/articles',
+        routes: [
+          { path: '/f2e/learn/articles', name: '文章', component: './search/articles' }
+        ]
       },
       {
-        name: '项目',
-        icon: 'smile',
-        path: '/learn/search/projects',
-        component: './search/projects',
+        path: '/f2e',
+        redirect: '/f2e/engineering/build',
       },
-      {
-        name: '应用',
-        icon: 'smile',
-        path: '/learn/search/applications',
-        component: './search/applications',
-      },
-    ],
+    ]
+  },
+  {
+    path: '/algorithm',
+    name: '算法学习',
   },
   {
     path: '/',
-    redirect: '/learn/search/articles',
+    redirect: '/home',
   },
   {
     component: './404',
