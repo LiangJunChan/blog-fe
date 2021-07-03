@@ -1,7 +1,8 @@
 ﻿export default [
   {
     path: '/home',
-    name: '首页'
+    name: '首页',
+    component: '@/pages/home'
   },
   {
     path: '/f2e',
@@ -22,7 +23,6 @@
         ]
       },
       {
-        path: '/f2e',
         redirect: '/f2e/engineering/build',
       },
     ]
@@ -30,6 +30,22 @@
   {
     path: '/algorithm',
     name: '算法学习',
+    routes: [
+      {
+        path: '/algorithm/leetcode',
+        name: 'LeetCode',
+        routes: [
+          {
+            path: '/algorithm/leetcode/stack',
+            name: '堆栈',
+            component: './leetcode/Stack'
+          }
+        ]
+      },
+      {
+        redirect: './leetcode/Stack'
+      }
+    ]
   },
   {
     path: '/',

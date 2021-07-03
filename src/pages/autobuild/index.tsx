@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { Card } from 'antd'
+import { queryRule } from './service'
 
 export default function autobuild() {
+  const [build, setBuild] = useState()
+
+  useEffect(() => {
+    (async () => {
+      const res = await queryRule()
+      setBuild(res)
+    })()
+  }, [])
+
   return (
-    <div>
-      前端工程化自动构建
-    </div>
+    <Card>
+      <div dangerouslySetInnerHTML={{ __html: build || ''}}></div>
+    </Card>
   )
 }
