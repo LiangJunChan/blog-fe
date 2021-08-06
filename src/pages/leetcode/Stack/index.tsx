@@ -3,6 +3,7 @@ import { Card, Drawer } from 'antd'
 import { Button, Tag, Space } from 'antd';
 import ProList from '@ant-design/pro-list';
 import { queryRule, queryList } from './service'
+import styles from './index.less'
 
 export default function stack() {
   const [list, setList] = useState([])
@@ -70,7 +71,7 @@ export default function stack() {
         }}
         closable={false}
       >
-        <div dangerouslySetInnerHTML={{ __html: leetcode || ''}}></div>
+        <div className={styles.stack} dangerouslySetInnerHTML={{ __html: leetcode || ''}}></div>
       </Drawer>
     </>
   )

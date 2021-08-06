@@ -119,10 +119,14 @@ export const layout: RunTimeLayoutConfig = ({ initialState }) => {
     },
     links: isDev
       ? [
-          <Link to="/umi/plugin/openapi" target="_blank">
+          <a href='https://beta-pro.ant.design/docs/getting-started-cn' target='_blank'>
             <LinkOutlined />
             <span>openAPI 文档</span>
-          </Link>,
+          </a>,
+          // <Link to="/umi/plugin/openapi" target="_blank">
+          //   <LinkOutlined />
+          //   <span>openAPI 文档</span>
+          // </Link>,
           <Link to="/~docs">
             <BookOutlined />
             <span>业务组件文档</span>
